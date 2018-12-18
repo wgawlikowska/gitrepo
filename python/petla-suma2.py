@@ -13,7 +13,9 @@ def main(args):
         print(suma)
         liczba=int(input("Podaj liczbę:"))
     print()    
-    print("Suma liczb<0;100>:",suma)
+
+        liczba=int(input("Podaj liczbę:"))
+    print()    
     
     return 0
 
