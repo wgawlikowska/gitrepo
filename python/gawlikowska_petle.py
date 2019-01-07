@@ -5,7 +5,7 @@
 def cwl1():
     suma = 0
     liczba = int(input("Podaj liczbę:"))
-    while suma <75:
+    while suma <=75:
         suma += liczba
         print(suma)
         liczba=int(input("Podaj liczbę:"))
@@ -14,19 +14,22 @@ def cwl1():
 
 def cwl2():
     
-licznik=0
-    n=>1
-    m=>1
- print("wartość", end=' ')
+
+    n=int(input("Od:"))
+    m=int(input("Do:"))
+    for in range(n,m+1):
+ print(i, end=' ')
 
 
 
 
 def cwl3():
 licznik=0
-    n = int(input("Podaj zakres górny"))
-    m = (0,n)
-    kwadrat=m^2
+    n = int(input("Liczba:"))
+    for in range (n+1):
+        print(i*i)
+        
+    
     
     
     
