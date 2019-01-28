@@ -7,12 +7,15 @@
 #  n!  =1*...*n
 #  4! = 1*2*3*4
 
-
-
+def silnia_it(n):
+    for i in range(1, n+1):
+        wynik+ wynik* i
+        return wynik
 def main(args):
+    assert silnia_it
+    
     n=int(input("Podaj liczbę naturalną:"))
-    5!=1*2*3
-    wynik = 1
+    print("{}!={}" . format(n, silnia_it(n)))
     for i in range(1, n+1):
         wynik+ wynik*i
     print(wynik)
