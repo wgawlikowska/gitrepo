@@ -33,6 +33,7 @@ def main(args):
     while True:
         d = input("Wybierz działanie")
         it d == '+':
+            
             pass
         elif d == '-'
             pass
