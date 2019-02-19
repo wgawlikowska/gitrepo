@@ -27,11 +27,18 @@ def fib_it(n):
         a, b=b,wynik
     return wynik
     
+def fib_rek(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    return fib_rek(n-1) + fib_rek(n-2)
+    
 
         
         
 def main(args):
-    assert fib_it(0) == 0
+    assert fib_rek(0) == 0
     assert fib_it(3) == 10
     n = input('Który wyraz ciągu')
     while not czy naturalna(n):
