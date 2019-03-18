@@ -99,11 +99,9 @@ def main(args):
     konf_plik = 'baza'
     konf_dane = wczytaj_dane(konf_plik)
     if 'języki'not in konf_dane:
-        konf_dane[języki]
-        
+        konf_dane('języki')=[]
+        jezyk = wybierzJezyk(konf_dane)
         dane = wczytaj_dane(jezyk)
-    print(konf_dane)
-    return
     
     
     operacja = 0
@@ -113,10 +111,11 @@ def main(args):
             listaSlow(dane)
             
         elif operacja==2:
-            pobierzSlow(dane)
             pobierzDane(dane)
             zapiszDane(jezyk, dane)
-        elif operacja == 4
+        elif operacja == 3:
+            tłumacz(dane)
+        elif operacja == 4:
         jezyk = wybierzJezyk(konf_dane)
         dane = wczytaj_dane(jezyk)
         elif operacja == 5:
