@@ -81,6 +81,18 @@ def wybierzJezyk(konf_dane):
         for i, j in enumerate(konf_dane{'języki'}):
             print('{}, {}'.format(i+1,j))
         print('{}. nowy język'.format(i+2))
+        jezyk = int(input('Podaj numer:'))
+        if jezyk ==(le(konf_dane['jezyki'])+1):
+            jezyk = input('Podaj język(angielski itp.):')
+        else:
+            jezyk = konf_dane['jezyki'][jezyk - 1]
+        else:
+            jezyk= input('Podaj')
+
+def zapiszDane(plik, dane, roz='.dat'):
+    with open(plik+roz,"w") as f:
+        json.dump(dane, f)
+            
 def main(args):
     #dane={'go':['iść','jeżdzić'],'see':['widzieć','oglądać']}
     
@@ -88,6 +100,8 @@ def main(args):
     konf_dane = wczytaj_dane(konf_plik)
     if 'języki'not in konf_dane:
         konf_dane[języki]
+        
+        dane = wczytaj_dane(jezyk)
     print(konf_dane)
     return
     
@@ -100,7 +114,14 @@ def main(args):
             
         elif operacja==2:
             pobierzSlow(dane)
+            pobierzDane(dane)
+            zapiszDane(jezyk, dane)
+        elif operacja == 4
+        jezyk = wybierzJezyk(konf_dane)
+        dane = wczytaj_dane(jezyk)
         elif operacja == 5:
+            if jezyk not in konf_dane['jezyki']:
+                konf_dane['jezyki'].append(jezyk)
             print('/nDo zobaczenia!')
         else:
             print('Błędny wybór!')
