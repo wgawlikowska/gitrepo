@@ -7,16 +7,23 @@ from matplotlib.mlab import frange
 
 
 
-
 def main(args):
-    #y = a*x +b
-    a = int(input('Podaj współczynnika: a'))
-    b = int(input('Podaj współczynnika: b'))
-    x = range(-10,11)
+
+    x = range(-1, 2,0.15)
+    print(x)
     y = [a * i + b for i in x]
     
+    y = []
+    for el in a:
+        if el<=0:
+            y.append(el/-3)
+        elif el <1:
+            y.append(el*el/3)
+        else:
+            y.append(el / (el + 2))
+    
     plt.plot(x, y)
-    plt.title('Wykres f(x)={}*x+{}'.format(a,b))
+    plt.title('Wykres f(x)')
     plt.grid(True)
     plt.show()
     return 0
